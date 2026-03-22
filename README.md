@@ -5,24 +5,24 @@
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.x-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-**OmniTrack** is a modular, real-time hand tracking and skeletal simulation engine. This project demonstrates advanced coordinate mapping, gesture recognition, and a "Digital Twin" simulation mode, specifically optimized for edge-computing environments with limited hardware resources.
+**OmniTrack** is a modular, real-time hand tracking and skeletal simulation engine. This project demonstrates advanced coordinate mapping, gesture recognition, and a "Digital Twin" simulation mode, specifically optimized for edge-computing environments.
 
 ---
 
 ## 🚀 Key Technical Features
 
 ### 🔹 Digital Twin Simulation (v3)
-Unlike standard trackers, OmniTrack renders a synchronized "Mathematical Skeleton" in a dedicated secondary buffer. This isolates the AI's spatial understanding from raw pixel data—a critical step for VR/AR and Robotics integration.
+OmniTrack renders a synchronized "Mathematical Skeleton" in a dedicated secondary buffer. This isolates the AI's spatial understanding from raw pixel data—a critical step for VR/AR and Robotics integration.
 
 ### 🔹 Context-Aware Gesture Engine
-Implemented a robust logic layer to detect complex hand states (Peace signs, Fists, High-Fives) by calculating the Euclidean distance and relative Y-axis positioning of 21 unique landmarks.
+Detects complex hand states (Peace signs, Fists, High-Fives) by calculating the Euclidean distance and relative positioning of 21 unique landmarks in real-time.
 
-### 🔹 Mirror-Logic Hardware Fix
-Developed a custom transformation handler to resolve **Handedness Classification** issues. The system dynamically adjusts logic for Left/Right hand thumb detection to maintain 100% accuracy in mirrored camera views.
+### 🔹 Mirror-Logic Correction
+Features a custom transformation handler for **Handedness Classification**. The system dynamically adjusts logic for Left/Right hand thumb detection to maintain 100% accuracy in mirrored camera views.
 
-### 🔹 Optimized for Edge Hardware
+### 🔹 Hardware Optimized
 * **Inference Speed:** ~30 FPS on dual-core Intel i5-7200U.
-* **Architecture:** Utilizes `model_complexity=0` to reduce CPU overhead while maintaining tracking stability.
+* **Architecture:** Utilizes `model_complexity=0` to ensure smooth performance on mobile-grade CPUs without a dedicated GPU.
 
 ---
 
